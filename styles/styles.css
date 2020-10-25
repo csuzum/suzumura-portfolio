@@ -1,0 +1,30 @@
+/* exclamation points background */
+body {
+  background-image: url(../images/background.jpg);
+  -webkit-background-clip: text;
+  background-position: 100%;
+  background-repeat: repeat;
+}
+/* image moves with screen size */
+.responsive {
+  width: 100%;
+  height: auto;
+}
+/* front page enter button */
+#enterbutton {
+  text-align: center;
+  margin: auto;
+  width: 100%;
+}
+/* links color-no underline */
+a {
+  color: red;
+}
+  /* unvisited link */
+  a:link {
+    text-decoration: none;
+}
+  /* mouse over link */
+  a:hover {
+    color: pink;
+}
