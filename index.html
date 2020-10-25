@@ -2,42 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Suzumura Portfolio</title>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Open+Sans">
-
+    <title>Opening Page</title>
     <style>
-      /* css comments go here */
-      body {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1rem;
-        text-shadow: 5px 5px 5px #aaa;
-      }
-      body {
-        background-image: url("./images/background.jpg");
-        background-position: 100%;
-        background-repeat: repeat;
-      }
-      .verticalcenter {
-        margin: 0 auto;
-        height: auto;
-        max-width: 100%;
-        border: none;
-        display: block;
-        padding: 5px 0;
-      }
-      .important:hover {
-        color: rgb(255, 51, 0);
-      }
+    /* exclamation points background */
+    body {
+      background-image: url(./images/background.jpg);
+      background-position: 100%;
+      background-repeat: repeat;
+    }
+    /* image moves with screen size */
+    .responsive {
+      width: 100%;
+      height: auto;
+    }
+    /* front page enter button */
+    #enterbutton {
+      text-align: center;
+      margin: auto;
+      width: 100%;
+    }
+    /* links color-no underline */
+    a {
+      color: red;
+    }
+      /* unvisited link */
+      a:link {
+        text-decoration: none;
+    }
+      /* mouse over link */
+      a:hover {
+        color: pink;
+    }
     </style>
-
-  </head>
+</head>
   <body>
     <div>
-      <img src="./images/hello.png" alt="cindy suzumura portfolio" class="verticalcenter"/>
-      <center><h3 class="important"><a href="./portfolio.html">enter</a></h3></center>
+      <img src="./images/hello.png" alt="cindy suzumura portfolio" class="responsive"/>
+      <h3 id="enterbutton"><a href="./portfolio.html">enter</a></h3>
   </div>
-
 
   </body>
 </html>
