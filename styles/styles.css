@@ -1,7 +1,10 @@
-/* exclamation points background */
+body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1rem;
+      }
+      /* exclamation points background */
 body {
   background-image: url(../images/background.jpg);
-  -webkit-background-clip: text;
   background-position: 100%;
   background-repeat: repeat;
 }
@@ -13,9 +16,38 @@ body {
 /* front page enter button */
 #enterbutton {
   text-align: center;
+  text-shadow: 0px 15px 5px rgba(0,0,0,0.1),
+                 10px 20px 5px rgba(0,0,0,0.05),
+                 -10px 20px 5px rgba(0,0,0,0.05);
   margin: auto;
   width: 100%;
 }
+  .headertitle {
+    width: 40%;
+    padding: 20px;
+    margin: 15px;
+  }
+
+/* portfolio grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 920px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+  .column img {
+    margin-top: 30px;
+    vertical-align: middle;
+    width: 98%;
+}
+  .column h3 {
+    text-align: center;
+  }
 /* links color-no underline */
 a {
   color: red;
@@ -27,4 +59,7 @@ a {
   /* mouse over link */
   a:hover {
     color: pink;
+}
+  .gridtitle {
+    text-align: center;
 }
