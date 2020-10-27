@@ -22,12 +22,25 @@ body {
   margin: auto;
   width: 100%;
 }
-  .headertitle {
-    width: 40%;
-    padding: 20px;
-    margin: 15px;
-  }
-
+/* header with padding */
+.header {
+  overflow: hidden;
+  padding: 40px 35px;
+}
+.header a {
+  float: left;
+  color: black;
+  padding: 12px
+  font-size: 181rem;
+  line-height: 2rem;
+  border-radius: 4px
+}
+.header a.logo {
+  font-size: 2rem;
+}
+.header-right {
+  float: right;
+}
 /* portfolio grid */
 .row {
   display: flex;
@@ -41,13 +54,15 @@ body {
   }
 }
   .column img {
-    margin-top: 30px;
+    margin-top: 5px;
     vertical-align: middle;
-    width: 98%;
+    width: 95%;
 }
-  .column h3 {
+
+  .column h4 {
     text-align: center;
   }
+
 /* links color-no underline */
 a {
   color: red;
@@ -59,7 +74,4 @@ a {
   /* mouse over link */
   a:hover {
     color: pink;
-}
-  .gridtitle {
-    text-align: center;
 }
