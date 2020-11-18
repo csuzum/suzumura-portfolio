@@ -561,6 +561,7 @@ body {
 
 .portfolio-title {
 	text-align: center;
+	margin-left: 3rem;
 }
 
 
@@ -568,9 +569,10 @@ body {
 
 .outer-grid {
 	display: flex;
+	justify-content: center;
 	flex-wrap: wrap;
 	padding: 0 3rem;
-	margin-left: 4rem;
+	margin-left: 3rem;
 }
 
 .inner-grid {
@@ -585,7 +587,7 @@ body {
 	width: 100%;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1600px) {
 	.inner-grid {
 		flex: 50%;
 		max-width: 50%;
