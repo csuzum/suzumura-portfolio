@@ -452,10 +452,9 @@ body {
 .intro-flex-wrapper {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-content: center;
 	padding-top: 10%;
-	padding-left: 15%
 }
 
 @media (max-width: 800px) {
@@ -496,6 +495,16 @@ body {
 .web-print {
 	font-size: .95rem;
 	color: tomato;
+}
+
+#delay {
+	transition-property: font-size;
+	transition-duration: 1s;
+	transition-delay: .1s;
+}
+
+#delay:hover {
+	font-size: 6.5rem;
 }
 
 .welcome {
@@ -539,40 +548,101 @@ body {
 }
 
 .header-flex-container {
+	float: right;
+	font-family: 'Fjalla One', sans-serif;
 	display: flex;
-	width: 25%;
+	width: 250px;
 	flex-direction: row;
 	justify-content: space-between;
-	flex-wrap: wrap;
-	float: right;
-	padding-top: 1%
+	flex-wrap: nowrap;
+	padding-top: 1%;
+	padding-right: 6%;
+}
+
+.portfolio-title {
+	text-align: center;
 }
 
 
-/* portfolio grid */
+/* image grid */
 
-.row {
+.outer-grid {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 0 2rem;
+	padding: 0 3rem;
+	margin-left: 4rem;
 }
 
-@media screen and (max-width: 1200px) {
-	.column {
+.inner-grid {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 0px;
+}
+
+.inner-grid img {
+	margin-top: 10px;
+	margin-bottom: 25px;
+	width: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+	.inner-grid {
 		flex: 50%;
 		max-width: 50%;
 	}
 }
 
-.column img {
-	margin-top: 2%;
-	margin-left: 4%;
-	vertical-align: middle;
+@media screen and (max-width: 600px) {
+	.inner-grid {
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+.container {
+	position: relative;
 	width: 95%;
 }
 
-.column h4 {
+.image {
+	opacity: 1;
+	display: block;
+	height: auto;
+	backface-visibility: hidden;
+	box-shadow: 5px 5px 5px 1px #d2d2d2;
+}
+
+.middle {
+	opacity: 0;
+	position: absolute;
+	width: inherit;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	text-align: center;
+}
+
+.container:hover .image {
+	opacity: .8;
+}
+
+.container:hover .middle {
+	opacity: 1;
+}
+
+.text {
+	background-color: #00cccc;
+	opacity: .8;
+	color: white;
+	font-size: 16px;
+	padding: 1rem 1rem;
+}
+
+.text p:first-child {
+	font-family: 'Lobster', cursive;
+	font-size: 2rem;
+	line-height: .1rem;
 }
 
 
@@ -589,35 +659,51 @@ a:link {
 	text-decoration: none;
 }
 
-
 /* mouse over link */
 
 a:hover {
-	color: tomato;
+	color: #00cccc;
 }
 
 .page-footer {
 	font-size: smaller;
 	text-align: center;
 	padding: 3px;
+	margin-top: 5%;
 	background-color: black;
 	color: white;
 }
 
-.centerimage {
+.about-image {
 	display: block;
-	padding-top: 2%;
-  margin-left: auto;
+	margin-left: auto;
 	margin-right: auto;
-	width: 60%;
+}
+
+.about-image {
+	transition: transform 1s;
+}
+
+.about-image:hover {
+	transform: rotate(1080deg);
 }
 
 .about {
+	position: relative;
 	text-align: center;
-	line-height: 1.2rem;
-  padding-bottom: 5%;
-	margin-left: 25%;
-	margin-right: 25%;
+	color: white;
+	font-family: 'Lobster', cursive;
+	font-size: 4rem;
+	text-shadow: .2rem .2rem tomato;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .about a {
@@ -626,4 +712,44 @@ a:hover {
 
 .about a:hover {
 	color: tomato;
+}
+
+.me-text {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	text-align: center;
+	line-height: 1.3rem;
+}
+
+.contact-container {
+	display: block;
+	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+	width: 350px;
+	padding: .7rem 2rem 2rem 2rem;
+	box-shadow: 5px 5px 5px 1px #d2d2d2;
+	line-height: .5rem;
+}
+
+input {
+	width: 98%;
+}
+
+textarea {
+	overflow: scroll;
+	height: 5rem;
+	width: 98%;
+}
+
+button {
+	height: 2rem;
+	width: 5rem;
+	font-family: 'Fjalla One', sans-serif;
+	color: white;
+	background-color: #00cccc;
+	border-color: #00cccc;
 }
