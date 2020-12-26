@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>C. Suzumura Portfolio</title>
-      <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="./styles/styles.css">
-      <script src="https://kit.fontawesome.com/05aeafdbc2.js" crossorigin="anonymous"></script>
-   </head>
-   <body>
+  <head>
+    <meta charset="utf-8">
+    <title>C. Suzumura Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lobster&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <script src="https://kit.fontawesome.com/05aeafdbc2.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a href="#main-content" class="hidden">Skip to main content</a>
+    <main>
       <header>
-         <div class="header">
-            <a href="./index.html">
-               <h4 class="logo"><span style="color: #00cccc;"><i class="fas fa-chevron-circle-right"></i></span> Cindy Suzumura</h4>
-            </a>
-            <div class="header-flex-container">
-               <a href="./index.html">Home</a>
-               <a href="./portfolio.html">Portfolio</a>
-               <a href="./about.html">About</a>
-            </div>
-         </div>
+        <div class="header">
+          <a href="./index.html">
+            <h4 class="logo"><span style="color: #00cccc; text-shadow: .2rem .2rem .3rem #b0afae"><i aria-hidden="true" class="fas fa-chevron-circle-right"></i></span> Cindy Suzumura</h4>
+          </a>
+          <nav class="header-flex-container">
+            <a href="./index.html">Home</a>
+            <a href="./portfolio.html">Portfolio</a>
+            <a href="./about.html">About</a>
+          </nav>
+        </div>
       </header>
-      <main>
-         <div class="about">
-            <img src="./images/me.png" alt="cindy suzumura peeking out of wardrobe" width="300" height="300" class="about-image">
-            <div class="centered">
-               <p>hi.</p>
-            </div>
-         </div>
-         <p class="me-text">I grew up in the wilds of Idaho dreaming of exploring the world and living near the ocean. I'm a web & print designer,  passionate gardener, expert pie maker, adept cat wrangler, and have been known to repair the occasional appliance.</p>
-         <p class="me-text">I'm a problem solver and always game to learn new stuff. I'm open for new projects, job opportunities, and creating good stuff for good people.</p>
-         <div class="contact-container">
-            <h3 style="tomato">Get in touch</h3>
-            <form action="index.html" method="post">
-               <p>Name</p>
-               <input name="name">
-               <p>Email</p>
-               <input name="email">
-               <p>Message</p>
-               <textarea name="message"></textarea>
-            </form>
-            <br>
-            <button class="submit" type="submit">Submit</button>
-         </div>
-      </main>
-      <footer class="page-footer">
-         <p><i class="far fa-copyright"></i> 2020 Cindy Suzumura. All rights reserved.</p>
-      </footer>
-   </body>
+      <div class="about">
+        <img src="./images/me.png" alt="cindy suzumura peeking out of wardrobe" width="300" height="300" class="about-image">
+        <div class="centered">
+          <h2>hi.</h2>
+        </div>
+      </div>
+      <p class="me-text">I grew up in the wilds of Idaho dreaming of exploring the world and living near the ocean. I'm a web & print designer,  passionate gardener, expert pie maker, adept cat wrangler, and have been known to repair the occasional appliance.</p>
+      <p class="me-text">I'm a problem solver and always game to learn new stuff. I'm open for new projects, job opportunities, and creating good stuff for good people.</p>
+      <section class="contact-container">
+        <h3 style="tomato">Get in touch</h3>
+        <form action="index.html" method="post">
+          <label for="fullname">Name:</label>
+          <input type="text" name="fullname" id="fullname">
+          <label for="emailAddress">Email:</label>
+          <input type="email" name="emailAddress" id="emailAddress">
+          <label for="message">Send me a message</label>
+          <textarea id="message" name="message" rows="4" cols="10"></textarea>
+        </form>
+        <br>
+        <button class="sign-up" type="submit">Submit</button>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <p><i aria-hidden="true" class="far fa-copyright" title="copyright icon">
+        </i>
+        <span class="sr-only">copyright logo</span>
+        2020 Cindy Suzumura. All rights reserved.
+      </p>
+    </footer>
+  </body>
 </html>
